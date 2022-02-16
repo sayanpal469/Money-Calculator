@@ -1,10 +1,30 @@
+/* google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baloo+Bhai+2:wght@400;700&family=Baloo+Bhaijaan+2:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Fredoka+One&family=Fuzzy+Bubbles:wght@400;700&family=Indie+Flower&family=Lobster&family=Poppins:wght@200;300;400;500;700&family=Quicksand:wght@400;700&family=Raleway:wght@300;400;700&family=The+Nautigal:wght@400;700&display=swap');
+
+/* common style */
+
 *{
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+h1{
+    font-size: 50px;
+}
+
+.calculator{
+    width: 50px;
+}
+
 .calculation-area{
-    background-color: lightgray;
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    box-shadow: 0 0 20px grey;
 }
 
 /* expence area */
@@ -14,6 +34,9 @@ input{
     margin-left: 20px;
     border-radius: 20px;
     border: none;
+    background-color: lightgray;
+    font-size: 25px;
+    text-align: center;
 }
 
 /* save area */
@@ -21,4 +44,8 @@ input{
 #save-input{
     width: 100px;
     border-radius: 0;
+}
+
+.toast{
+    display: none;
 }
