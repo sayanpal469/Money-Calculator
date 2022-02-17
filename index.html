@@ -28,10 +28,12 @@
         <div class="row mt-5">
             <!-- Left banner-->
 
-            <div class="col-lg-6 .col-1">
+            <div class="col-lg-6 col-1">
                 <img class="h-75 img-fluid ms-5" src="images/calculator.jpg" alt="">
             </div>
-            <div class="col-lg-6 .col-1">
+
+
+            <div class="col-lg-6 col-1">
                 <!-- Calculation area-->
                 <section class="calculation-area p-3">
                     <!-- Income area-->
@@ -59,34 +61,44 @@
                             <label for="">Cloths:</label>
                             <input id="cloths" type="text">
                         </div>
+                        
 
                         <!-- Toast 1 for number-->
                         <div id="toast1" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header">              
-                            </div>
-                            <div class="toast-body bg-danger">
-                              <span class="text-white">please input a number</span>
-                            </div>
+                          <div class="toast-header">              
                           </div>
+                          <div class="toast-body bg-danger">
+                            <span class="text-white">please input a positive number</span>
+                          </div>
+                        </div>
 
-                        <!-- Toast 2 for a positive number-->
-                        <div id="toast2" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header">              
-                            </div>
-                            <div class="toast-body bg-danger">
-                              <span class="text-white">please input a positive number</span>
-                            </div>
+                      <!-- Toast 2 for a positive number-->
+                      <div id="toast2" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">              
                           </div>
+                          <div class="toast-body bg-danger">
+                            <span class="text-white">please input a positive number</span>
+                          </div>
+                        </div>
 
-                        <!-- Toast 3 for a number geter than input value-->  
-                        <div id="toast3" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header">              
-                            </div>
-                            <div class="toast-body bg-danger">
-                              <span class="text-white">please input a positive number geter then input value</span>
-                            </div>
+                      <!-- Toast 3 for a number geter than input value-->  
+                      <div id="toast3" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">              
                           </div>
-                        
+                          <div class="toast-body bg-danger">
+                            <span class="text-white">please input a positive number geter then income value</span>
+                          </div>
+                        </div>
+
+                        <!-- Toast 4 -->
+                      <div id="toast4" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">              
+                          </div>
+                          <div class="toast-body bg-danger">
+                            <span class="text-white">Sorry! your savings can not be geter than than your current balance</span>
+                          </div>
+                        </div>
+                      
 
                         <button onclick="getExpence()" id="calculate-btn" class="btn btn-primary px-5 py-2 mt-3 mb-5">Calculate</button>
 
@@ -104,9 +116,10 @@
 
                         <span>%</span>
 
-                            <button class="btn btn-primary ms-3">Save</button>
+                            <button onclick="getSavingAmount()" id="save-btn" class="btn btn-primary ms-3">Save</button>
 
                             <h4 class="mt-4">Saving Amount: <span id="saving-amount"></span></h4>
+
 
                             <h4>Remaining Balance: <span id="remaining-amount"></span></h4>
                     </div>
